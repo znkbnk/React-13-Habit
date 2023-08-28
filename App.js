@@ -1,9 +1,8 @@
-//App.js
-
 import React, { useState, useEffect } from "react";
 import HabitForm from "./HabitForm";
 import HabitList from "./HabitList";
 import DeletedHabits from "./DeletedHabits";
+import FavoriteHabits from "./FavoriteHabits";
 
 function App() {
   const [habits, setHabits] = useState([]);
@@ -88,17 +87,10 @@ function App() {
         />
       )}
       {showFavoriteHabits && (
-        <div className='favorite-habits-modal'>
-          <div className='favorite-habits-content'>
-            <h2>Favorite Habits</h2>
-            <ul>
-              {favoriteHabits.map((habit, index) => (
-                <li key={index}>{habit}</li>
-              ))}
-            </ul>
-            <button onClick={() => setShowFavoriteHabits(false)}>Close</button>
-          </div>
-        </div>
+        <FavoriteHabits
+          favoriteHabits={favoriteHabits}
+          setShowFavoriteHabits={setShowFavoriteHabits}
+        />
       )}
     </div>
   );
