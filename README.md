@@ -28,12 +28,17 @@ setFavoriteHabits, and if it does, remove it using the filter method.
 
 Step 4: Show Favorite Habits Modal
 
-- In your App.js file, find the section where you're rendering
-the navigation menu.
-- Add a new button to show the favorite habits modal.
-- Inside the modal content:
+- Create a new file named FavoriteHabits.js in the same directory
+as your other components.
+- Open the FavoriteHabits.js file, import React at the top of the file.
 - List the habits from the favoriteHabits array.
 - Add a button to close the modal by toggling showFavoriteHabits.
+- In your App.js file, find the section where you're rendering the
+content for the favorite habits modal.
+- Inside that section, import the FavoriteHabits component at the
+top of your App.js file.
+- Conditionally render the FavoriteHabits component when the
+showFavoriteHabits state is true.
 
 Step 5: Styling and Testing
 
